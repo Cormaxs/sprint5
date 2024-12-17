@@ -8,8 +8,8 @@ const router = express.Router();
 router.get('/', async (req, res) => {
    // const paises = await PaisesRepository.obtenerTodos();
     const nameCreador = "Tomas Barros"
-    const filtrado = await PaisesRepository.obtenerPorCreador(nameCreador)
-    console.log(filtrado)
+    const filtrado = await PaisesRepository.obtenerPorCreador(nameCreador);
+    //console.log(filtrado)
     res.render('dashboardPaises', { filtrado });
 });
 

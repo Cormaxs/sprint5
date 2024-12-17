@@ -22,7 +22,7 @@ class PaisesRepository extends IRepository{
     async obtenerPorCreador(nombreCreador) {
         // Filtra los países donde el campo 'creator' coincida con 'nombreCreador'
         // console.log(nombreCreador)
-        return await paises.find({ creador: nombreCreador });
+        return await paises.find({ creador: nombreCreador, "languages.spa": "Spanish" });
     }
 }
 
